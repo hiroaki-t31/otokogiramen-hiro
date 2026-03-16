@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+body {
+  background-color: #ae0003;
+  text-align: center;
+  color: #ddd;
+  font-family: "Zen Antique Soft", serif;
+  font-size: 20px;
+  font-style: normal;
+  width: 860px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Reggae One", system-ui;
+  font-size: 50px;
+  font-style: normal;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: "Reggae One", system-ui;
+  font-size: 30px;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+p {
+  font-family: "Zen Antique Soft", serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+#photo,
+#ramen_img {
+  width: 830px;
+}
+
+iframe {
+  width: 830px;
+  height: 400px;
+}
+
+.menu {
+  margin-right: 40px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  list-style-type: none;
+  font-size: 30px;
+  background-color: #faaf10;
+  margin: 1px;
+  padding: 5px;
+  width: 200px;
+  justify-content: center;
+}
+
+h1 a,
+.menu ul a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+a {
+  color: #ddd;
+}
+
+.menu ul :hover {
+  background-color: #ffa883;
+}
+
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table tr td {
+  border: 2px solid #ddd;
+  padding: 10px;
+}
+
+table tr td img {
+  border-radius: 50%;
+}
+
+a:hover,
+table tr td a:hover,
+#time,
+#required {
+  color: #faaf10;
+}
+
+table tr td b {
+  border-bottom: #ddd dotted 1px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#rules_img {
+  width: 500px;
+}
+
+#ramen_ul {
+  text-align: left;
+}
+
+#topping {
+  display: flex;
+  justify-content: center;
+}
+
+figure img {
+  width: 180px;
+}
+
+#name {
+  width: 200px;
+}
+
+#email {
+  width: 300px;
+}
+
+#tel {
+  width: 250px;
+}
+
+#text {
+  width: 500px;
+  height: 200px;
+}
+
+footer {
+  background-color: #d00;
+  color: #ddd;
+  margin-top: 100px;
+  padding: 5px;
+}
+
+/*↑ここまでPC版↑*/
+/*↓ここからスマホ版↓*/
+
+@media screen and (max-width:860px) {
+
+  body {
+    background-color: #ae0003;
+    text-align: center;
+    color: #ddd;
+    font-family: "Zen Antique Soft", serif;
+    font-size: 20px;
+    font-style: normal;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .menu-wrapper {
+    position: relative;
+  }
+
+  .menu-icon {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 3;
+    display: inline-block;
+  }
+
+  .menu-icon span {
+    display: block;
+    height: 4px;
+    margin: 6px 0;
+    background: #ddd;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+
+  #menu-toggle:checked+.menu-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  #menu-toggle:checked+.menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked+.menu-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 1;
+  }
+
+  #menu-toggle:checked~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #ae0003;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: left 0.4s ease;
+    z-index: 2;
+  }
+
+  #menu-toggle:checked~.menu {
+    left: 0;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 60px 20px;
+  }
+
+  .menu li {
+    margin: 20px 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+  }
+
+  .menu ul {
+    display: block;
+    justify-content: center;
+  }
+
+  .menu ul li {
+    list-style-type: none;
+    font-size: 30px;
+    background-color: #ae0003;
+    margin: 1px;
+    padding: 5px;
+    width: 200px;
+  }
+
+  .menu ul a {
+    text-decoration: none;
+    color: #ddd;
+  }
+
+  #photo,
+  #ramen_img {
+    width: 100%;
+    height: auto;
+  }
+
+  table tr td {
+    display: block;
+  }
+
+  #rules_img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #topping {
+    display: block;
+    justify-content: center;
+  }
+
+  figure img {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
