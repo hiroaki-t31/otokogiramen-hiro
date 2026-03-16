@@ -1,9 +1,14 @@
 # otokogiramen-hiro
 架空のラーメン店「漢気らーめん宏」の公式サイトです。
+
 制作年月:2025年8月
+
 制作時間:15時間
+
 使用言語:HTML、CSS、JavaScript
+
 コード書き込みに使用したアプリ:Visual Studio Code
+
 画像作成:ChatGPT、Nano Banana
 
 若い男性をターゲットにした、架空の二郎系ラーメンの公式サイトを作成しました。
